@@ -6,7 +6,7 @@ import gauss, gaussjordan, cholesky, banachiewicz
 import iteracjaprosta, iteracjaseidela
 
 class Zadanie:
-    def __init__(self, n = 1000, M = 10, N = 10):
+    def __init__(self, n = 1000, M = 4, N = 20):
         """Konstruktor okreslajacy parametry eksperymentu"""
         self.n = n                          # maksymalny rozmiar macierzy
         self.M = M                          # liczba pomiarow
@@ -17,11 +17,24 @@ class Zadanie:
     def mierz_czas(self, metoda, k):
         """Metoda mierzaca czas rozwiazywania problemu wybrana metoda
             k - rozmiar macierzy"""
+        #rozmiar macierzy k = 150, tak jak przy próbach 
+        if k is None:
+            self.k = 150
         czas = 0.0
         # tworzymy obiekt klasy Uklad
+
+        macierz = uklad.Uklad(k)
         
         # tworzymy petle, w ktorej bedziemy mierzyc czas rozwiazywania
         # ukladu n rownan self.pomiary razy
+
+        if metoda==1:
+            for i in range(0,self.M):
+                macierz.losuj_uklad()
+                algorytm = gauss.Gauss(macierz)
+                stoper = time.time()
+                algorytm.eliminacja()
+                algorytm.rozwiaz_trojkatny()
         
         return czas/self.M
     

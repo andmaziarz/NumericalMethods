@@ -50,19 +50,38 @@ def testy(typ):
     elif typ == 4:
         """Miejsce na rozwiazanie - przygotowanie"""
         # tworzymy obiekt klasy Uklad
+
+        # metoda gaussa
+        # N = 20
+        # M = 4
+        n = 150
+
+        # rozmiar n = 20, pokazywał czas 0.0, został zmieniony na n = 150
+
+        test1  = uklad.Uklad(n)
         
         # losujemy odpowiedni uklad rownan
+
+        test1.losuj_uklad()
         
         # tworzymy obiekt klasy odpowiadajacej metodzie
+
+        proba1 = gauss.Gauss(test1)
         
         # uruchamiamy stoper
         stoper = time.time()
         # wywolujemy odpowiednie metody
+
+        proba1.eliminacja()
+        proba1.rozwiaz_trojkatny()
         
         # zatrzymujemy stoper
         czas = time.time() - stoper
+
         # wyswietlamy czas rozwiazywania ukladu
+        proba1.wypisz_rozwiazanie()
         print(f"Czas rozwiazywania ukladu: {czas}")
+        
     elif typ == 5:
         """Miejsce na rozwiazanie Zadania 1"""
         # tworzymy obiekt klasy Zadanie i podajemy odpowiednie parametry
@@ -70,7 +89,7 @@ def testy(typ):
         # badamy zlozonosc obliczeniowa wybranej metody
         zad1.badaj_zlozonosc(
             metoda = 1,
-            opis = "Metoda ..."
+            opis = "Metoda Gaussa"
         )
     elif typ == 6:
         # porownujemy metody
@@ -83,5 +102,5 @@ def testy(typ):
         )
         
 if __name__ == '__main__':
-    testy(6)
+    testy(4)
     

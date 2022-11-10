@@ -35,7 +35,16 @@ class Zadanie:
                 stoper = time.time()
                 algorytm.eliminacja()
                 algorytm.rozwiaz_trojkatny()
-                czas += time.time() - stoper
+                
+            elif metoda==2:
+                macierz.losuj_uklad_symetryczny_dodatnio_okreslony()
+                algorytm = cholesky.Cholesky(macierz)
+                stoper = time.time()
+                algorytm.rozklad()
+                algorytm.rozwiaz_trojkatny_dolny()
+                algorytm.rozwiaz_trojkatny_gorny
+            
+            czas += time.time() - stoper
         
         return czas/self.M
     

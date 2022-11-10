@@ -81,7 +81,7 @@ def testy(typ):
     elif typ == 5:
         """Miejsce na rozwiazanie Zadania 1"""
         # tworzymy obiekt klasy Zadanie i podajemy odpowiednie parametry
-        zad1 = zadanie.Zadanie()
+        zad1 = zadanie.Zadanie(150,4,20)
         # badamy zlozonosc obliczeniowa wybranej metody
         zad1.badaj_zlozonosc(
             metoda = 1,
@@ -90,16 +90,20 @@ def testy(typ):
     elif typ == 6:
         # porownujemy metody
         # tworzymy obiekt klasy Zadanie i podajemy odpowiednie parametry
-        zad2 = zadanie.Zadanie()
+        zad2 = zadanie.Zadanie(150,4,20)
         # badamy zlozonosc obliczeniowa wybranej metody
         zad2.porownaj_metody(
-            nazwa_metody1 = "Metoda ...",
-            nazwa_metody2 = "Metoda ..."
+            nazwa_metody1 = "Metoda Gausa",
+            nazwa_metody2 = "Metoda Cholesky'ego" 
         )
         
 if __name__ == '__main__':
-    testy(5)
 
+    #zad1
+    #testy(4)
+    #testy(5)
     #zad1 = zadanie.Zadanie()
     #print("Srednia dla M = 4: "+str(zad1.mierz_czas(1, 150)))
-    
+
+    #zad2
+    #testy(6)

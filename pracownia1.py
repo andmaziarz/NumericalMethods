@@ -50,10 +50,6 @@ def testy(typ):
     elif typ == 4:
         """Miejsce na rozwiazanie - przygotowanie"""
         # tworzymy obiekt klasy Uklad
-
-        # metoda gaussa
-        # N = 20
-        # M = 4
         n = 150
 
         # rozmiar n = 20, pokazywał czas 0.0, został zmieniony na n = 150
@@ -65,7 +61,7 @@ def testy(typ):
         test1.losuj_uklad()
         
         # tworzymy obiekt klasy odpowiadajacej metodzie
-
+        # metoda gaussa
         proba1 = gauss.Gauss(test1)
         
         # uruchamiamy stoper
@@ -102,5 +98,8 @@ def testy(typ):
         )
         
 if __name__ == '__main__':
-    testy(4)
+    testy(5)
+
+    #zad1 = zadanie.Zadanie()
+    #print("Srednia dla M = 4: "+str(zad1.mierz_czas(1, 150)))
     

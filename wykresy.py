@@ -1,5 +1,5 @@
 from matplotlib import pyplot as plt
-import scipy as sco
+import scipy.optimize as sco
 import numpy as np
 
 class Wykresy:

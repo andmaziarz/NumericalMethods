@@ -6,7 +6,7 @@ import gauss, gaussjordan, cholesky, banachiewicz
 import iteracjaprosta, iteracjaseidela
 
 class Zadanie:
-    def __init__(self, n = 150, M = 4, N = 20):
+    def __init__(self, n = 1000, M = 4, N = 20):
         """Konstruktor okreslajacy parametry eksperymentu"""
         self.n = n                          # maksymalny rozmiar macierzy
         self.M = M                          # liczba pomiarow
@@ -28,6 +28,7 @@ class Zadanie:
         # tworzymy petle, w ktorej bedziemy mierzyc czas rozwiazywania
         # ukladu n rownan self.pomiary razy
 
+        
         for i in range(0,self.M):
             if metoda==1:
                 macierz.losuj_uklad()

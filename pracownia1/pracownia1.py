@@ -50,7 +50,7 @@ def testy(typ):
     elif typ == 4:
         """Miejsce na rozwiazanie - przygotowanie"""
         # tworzymy obiekt klasy Uklad
-        n = 4
+        n = 150
 
         # rozmiar n = 20, pokazywał czas 0.0, został zmieniony na n = 150
 
@@ -58,7 +58,7 @@ def testy(typ):
         
         # losujemy odpowiedni uklad rownan
 
-        test1.zadaj_uklad([[-3,2,-1,3],[0,2,-3,-1],[9,-4,3,-10],[0,-2,-3,4]],[6,5,-19,4])
+        test1.losuj_uklad()
         
         # tworzymy obiekt klasy odpowiadajacej metodzie
         # metoda gaussa
@@ -100,7 +100,7 @@ def testy(typ):
 if __name__ == '__main__':
 
     #zad1
-    testy(4)
+    #testy(4)
     #testy(5)
     #zad1 = zadanie.Zadanie()
     #print("Srednia dla M = 4: "+str(zad1.mierz_czas(1, 150)))
